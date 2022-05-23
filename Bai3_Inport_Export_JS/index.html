@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        class Person {
+            constructor(name) {
+                this.setName(name);
+            }
+            getName() {
+                return this.name;
+            }
+            setName(newName) {
+                newName = newName.trim();
+                if (newName === '') {
+                    throw 'The name cannot be empty';
+                }
+                this.name = newName;
+            }
+        }
+
+        let person = new Person('Jane Doe');
+        console.log(person); // Jane Doe
+
+        person.setName('Jane Smith');
+        console.log(person.getName()); // Jane Smith
+
+        let add = (x, y) => { return x + y; };
+        console.log(typeof person);
+
+
+        let firstName = Symbol('first name');
+        console.log(firstName);
+    </script>
+
+</body>
+
+</html>
